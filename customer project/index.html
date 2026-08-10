@@ -10,6 +10,12 @@
     />
     <meta name="generator" content="Astro v5.13.2" />
     <title>Customer project</title>
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+    />
+
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/sidebars/"
@@ -241,21 +247,14 @@
           href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
-          <svg
-            class="bi pe-none me-2"
-            width="40"
-            height="32"
-            aria-hidden="true"
-          >
-            <use xlink:href="#bootstrap"></use>
-          </svg>
+          <i class="bi bi-lightning-charge fs-2 me-3"></i>
           <span class="fs-4">Sidebar</span>
         </a>
 
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">
+            <a href="/" class="nav-link active" aria-current="page">
               <svg
                 class="bi pe-none me-2"
                 width="16"
@@ -267,47 +266,9 @@
               Home
             </a>
           </li>
+
           <li>
-            <a href="#" class="nav-link text-white">
-              <svg
-                class="bi pe-none me-2"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlink:href="#speedometer2"></use>
-              </svg>
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg
-                class="bi pe-none me-2"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlink:href="#table"></use>
-              </svg>
-              Orders
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg
-                class="bi pe-none me-2"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlink:href="#grid"></use>
-              </svg>
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link text-white">
+            <a href="./screens/add.html" class="nav-link text-white">
               <svg
                 class="bi pe-none me-2"
                 width="16"
@@ -316,7 +277,7 @@
               >
                 <use xlink:href="#people-circle"></use>
               </svg>
-              Customers
+              Add Customers
             </a>
           </li>
         </ul>
@@ -353,8 +314,10 @@
         <!-- //// navbar :::  -->
 
         <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand">Navbar</a>
+          <div
+            class="container-fluid justify-content-center justify-content-md-between flex-column flex-md-row"
+          >
+            <a class="navbar-brand fw-bolder fs-3">Your Brand</a>
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
@@ -394,7 +357,34 @@
               <td>test3</td>
               <td>test4</td>
               <td>test5</td>
-              <td>test6</td>
+              <td>
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-title="View user"
+                  data-bs-placement="bottom"
+                  class="btn btn-primary btn-sm"
+                  href="./screens/view.html"
+                  ><i class="bi bi-eye"></i
+                ></a>
+
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-title="edit page"
+                  data-bs-placement="bottom"
+                  class="btn btn-primary btn-sm"
+                  href="./screens/edit.html"
+                  ><i class="bi bi-pencil"></i
+                ></a>
+
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-title="delete user"
+                  data-bs-placement="bottom"
+                  class="btn btn-danger btn-sm"
+                  href=""
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
             </tr>
           </tbody>
         </table>
