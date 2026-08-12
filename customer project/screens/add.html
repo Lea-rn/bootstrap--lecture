@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Customer project</title>
+    <title>Add page</title>
 
     <link
       rel="stylesheet"
@@ -331,6 +331,67 @@
             </form>
           </div>
         </nav>
+
+        <!-- ////// form ::: -->
+        <form class="row g-3 mt-5">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputEmail4"
+              placeholder="put your name"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="inputEmail4" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Telephone</label>
+            <input type="tel" class="form-control" id="inputEmail4" />
+          </div>
+
+          <div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Age</label>
+              <input type="number" class="form-control" id="inputEmail4" />
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Country</label>
+              <select id="inputState" class="form-select">
+                <option hidden selected>Choose...</option>
+                <option>Tunisia</option>
+                <option>Germany</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Gender</label>
+              <select id="inputState" class="form-select">
+                <option selected hidden>Choose...</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
       </section>
     </main>
 
