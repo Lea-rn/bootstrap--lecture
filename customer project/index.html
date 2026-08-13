@@ -98,6 +98,7 @@
         display: block !important;
       }
     </style>
+    <link rel="stylesheet" href="./css/mystyle.css" />
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -240,15 +241,15 @@
     <main class="d-flex flex-nowrap border">
       <!-- sidebar ::  -->
       <div
-        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-        style="width: 280px"
+        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
+        id="sidebarId"
       >
         <a
           href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
           <i class="bi bi-lightning-charge fs-2 me-3"></i>
-          <span class="fs-4">Sidebar</span>
+          <span class="fs-4 sidebar-text">Sidebar</span>
         </a>
 
         <hr />
@@ -263,7 +264,7 @@
               >
                 <use xlink:href="#home"></use>
               </svg>
-              Home
+              <span class="sidebar-text">Home</span>
             </a>
           </li>
 
@@ -277,7 +278,7 @@
               >
                 <use xlink:href="#people-circle"></use>
               </svg>
-              Add Customers
+              <span class="sidebar-text">Add Customers</span>
             </a>
           </li>
         </ul>
@@ -313,11 +314,25 @@
       <section class="border w-100">
         <!-- //// navbar :::  -->
 
+        <style>
+          .bi-list::before {
+            transform: scaleX(1.6);
+            font-size: 30px;
+          }
+        </style>
+
         <nav class="navbar bg-body-tertiary">
           <div
             class="container-fluid justify-content-center justify-content-md-between flex-column flex-md-row"
           >
-            <a class="navbar-brand fw-bolder fs-3">Your Brand</a>
+            <a class="navbar-brand fw-bolder fs-3">
+              <!-- ///// our button  -->
+              <button class="btn" onclick="toggleSidebar()">
+                <i class="bi bi-list"></i>
+              </button>
+
+              Your Brand</a
+            >
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
@@ -393,5 +408,11 @@
 
     <script src="./js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
     <script src="./js/sidebars.js" class="astro-vvvwv3sm"></script>
+
+    <script>
+      function toggleSidebar() {
+        sidebarId.classList.toggle("small-sidebar");
+      }
+    </script>
   </body>
 </html>

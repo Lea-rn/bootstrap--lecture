@@ -1,0 +1,15 @@
+.sidebar {
+  width: 280px;
+}
+
+.small-sidebar {
+  width: 80px;
+}
+
+section h1 {
+  color: red;
+}
+
+.small-sidebar .sidebar-text {
+  display: none;
+}
