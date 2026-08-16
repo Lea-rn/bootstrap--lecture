@@ -241,9 +241,17 @@
     <main class="d-flex flex-nowrap border">
       <!-- sidebar ::  -->
       <div
-        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
+        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar position-relative"
         id="sidebarId"
       >
+        <button
+          style="right: 10px; top: 17px; cursor: pointer"
+          class="position-absolute btn"
+          onclick="toggleSidebar()"
+        >
+          <i class="bi bi-x-circle"></i>
+        </button>
+
         <a
           href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
@@ -297,7 +305,7 @@
               height="32"
               class="rounded-circle me-2"
             />
-            <strong>mdo</strong>
+            <strong class="sidebar-text">mdo</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -314,25 +322,11 @@
       <section class="border w-100">
         <!-- //// navbar :::  -->
 
-        <style>
-          .bi-list::before {
-            transform: scaleX(1.6);
-            font-size: 30px;
-          }
-        </style>
-
         <nav class="navbar bg-body-tertiary">
           <div
             class="container-fluid justify-content-center justify-content-md-between flex-column flex-md-row"
           >
-            <a class="navbar-brand fw-bolder fs-3">
-              <!-- ///// our button  -->
-              <button class="btn" onclick="toggleSidebar()">
-                <i class="bi bi-list"></i>
-              </button>
-
-              Your Brand</a
-            >
+            <a class="navbar-brand fw-bolder fs-3"> Your Brand</a>
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
